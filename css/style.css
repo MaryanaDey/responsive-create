@@ -1,0 +1,49 @@
+@import url("reset.css");
+
+/*---------------*/
+
+body {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 1.25rem;
+
+}
+
+/*-------------------*/
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+}
+
+/*---------------------*/
+.account {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+}
+
+.account__left-side {
+    font-family: "Manrope";
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+.account__left-side::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    background: url('../img/');
+}
+
+.account__title {}
+
+.account__text {}
+
+.account__inset {}
+
+.account__logo {}
