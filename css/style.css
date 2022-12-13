@@ -33,7 +33,7 @@ body {
     flex: 0 0 49.444444%;
 }
 
-.account__left-slide::before {
+.account__left-side::before {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -102,7 +102,7 @@ body {
     line-height: 1.36;
 }
 
-.form__title:not(:last-child) {
+.form__input:not(:last-child) {
     margin-bottom: 0.3125rem;
 }
 
@@ -123,7 +123,7 @@ body {
 }
 
 .form__input:hover {
-    border-bottom: 1px solid rgb(234, 12, 12);
+    border-bottom: 1px solid #08eb1f;
     cursor: pointer;
 }
 
@@ -157,7 +157,7 @@ body {
 }
 
 form__button:hover {
-    background-color: rgb(194, 14, 14);
+    background-color: #333;
     cursor: pointer;
 }
 
@@ -180,7 +180,7 @@ form__button:hover {
 
 .form__or span {
     background-color: #fff;
-    position: relative;
+    /* position: relative; */
     padding: 0 0.5rem;
 }
 
@@ -202,4 +202,94 @@ form__button:hover {
     padding-left: 2.5rem;
     line-height: 1.3rem;
 
+}
+
+.account__login {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.account__link-login {
+    text-decoration: underline;
+    font-weight: 500;
+
+}
+
+.account__link-login:hover {
+    text-decoration: none;
+}
+
+/* Animationelements */
+
+.account__left-side::before {
+    transform: translate(-100%, 0px);
+}
+
+.loaded .account__left-side::before {
+    transform: translate(0px, 0px);
+    transition: all 2s ease 1.5s;
+}
+
+.form>*,
+.account__logo,
+.account__login {
+    transform: translate(0px, 1.875rem);
+    opacity: 0;
+}
+
+.loaded .form>*,
+.loaded .account__logo,
+.loaded .account__login {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.loaded .account__logo {
+    transition-delay: 0.5s;
+}
+
+.loaded .form__title {
+    transition-delay: 0.7s;
+}
+
+.loaded .form__text {
+    transition-delay: 0.9s;
+}
+
+.loaded .form__items {
+    transition-delay: 1.1s;
+}
+
+.loaded .form__actions {
+    transition-delay: 1.3s;
+}
+
+.loaded .account__login {
+    transition-delay: 1.5s;
+}
+
+/* RESPONSIVE */
+/* ONLY ONE breakpoint :) */
+
+@media (max-width: 64.375em) {
+    .account {
+        display: block;
+    }
+
+    .account__left-side::before {
+        transform: translate(0px, 0px);
+    }
+
+    .account__left-side,
+    .account__content {
+        padding: 2.75rem 5.1666667%;
+    }
+
+    .account__inset {
+        gap: 2.125rem;
+        min-width: 0;
+        min-width: none;
+    }
 }
